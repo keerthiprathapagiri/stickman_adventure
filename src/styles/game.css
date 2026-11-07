@@ -1,0 +1,32 @@
+.stage{position:relative;width:min(100vw,calc(100vh*16/9));aspect-ratio:16/9;max-height:100vh;overflow:hidden;border-radius:12px;box-shadow:0 0 60px rgba(120,80,255,.4)}
+.cv{width:100%;height:100%;display:block}
+.hud{position:absolute;inset:10px 10px auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;pointer-events:none}
+.chip{background:rgba(20,10,60,.55);backdrop-filter:blur(6px);border-radius:999px;padding:.25em .9em;font-weight:800;font-size:clamp(.7rem,1.8vw,1rem)}
+.prog{flex:1;min-width:80px;height:10px;border-radius:9px;background:rgba(255,255,255,.25);overflow:hidden}.prog i{display:block;height:100%;background:linear-gradient(90deg,#7dffb2,#ffd84d);border-radius:9px}
+.pause{pointer-events:auto;width:38px;height:38px;border-radius:50%;border:0;background:#fff;color:#2a1b5e;font-weight:800;cursor:pointer}
+.overlay{position:absolute;inset:0;display:grid;place-items:center;background:rgba(15,8,45,.62);backdrop-filter:blur(5px);z-index:5;animation:fade .3s}
+.menu .overlay{position:fixed}
+.panel{display:flex;flex-direction:column;align-items:center;gap:12px;padding:24px 34px;border-radius:28px;background:linear-gradient(160deg,rgba(120,90,230,.9),rgba(60,30,140,.92));box-shadow:0 20px 60px rgba(0,0,0,.4),inset 0 0 0 2px rgba(255,255,255,.25);animation:pop .4s cubic-bezier(.3,1.6,.5,1);max-height:96%;overflow:auto}
+.panel h2{font:800 clamp(1.5rem,4vw,2.2rem) 'Baloo 2'}
+.touch{display:none;position:absolute;inset:auto 14px 14px;justify-content:space-between;align-items:flex-end;pointer-events:none}
+.touch>div{display:flex;gap:14px}
+.tbtn{pointer-events:auto;width:72px;height:72px;border-radius:50%;border:0;background:rgba(255,255,255,.35);color:#fff;font:800 1.5rem 'Baloo 2';backdrop-filter:blur(4px);touch-action:none}
+.tbtn.jump{width:92px;height:92px;background:rgba(255,200,80,.6);font-size:1.1rem}.tbtn:active{background:rgba(255,255,255,.7)}
+@media (hover:none) and (pointer:coarse){.touch{display:flex}}
+.wipe{position:absolute;inset:0;z-index:9;pointer-events:none;background:#fff;clip-path:circle(0% at 50% 50%);animation:wipe .9s ease-in-out forwards}
+.menu{position:relative;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;overflow:hidden;background:linear-gradient(#2b1a6e,#7a4fd6 60%,#ff9bd0);animation:bg 14s ease-in-out infinite alternate;background-size:100% 160%}
+.menu>*{position:relative;z-index:1}.menu-sky{position:absolute!important;inset:0;z-index:0!important;overflow:hidden}
+.cloud{position:absolute;left:-200px;width:160px;height:50px;border-radius:50px;background:rgba(255,255,255,.4);animation:drift linear infinite;filter:blur(1px)}
+.cloud:before{content:'';position:absolute;left:30px;top:-24px;width:70px;height:60px;border-radius:50%;background:inherit}
+.star{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;animation:twinkle 2.5s infinite}
+.title{font:800 clamp(2.6rem,10vw,6rem)/1 'Baloo 2';text-align:center;letter-spacing:.04em;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline}
+.title span{display:inline-block;color:#fff;-webkit-text-stroke:3px #2a1b5e;paint-order:stroke fill;text-shadow:0 6px 0 #2a1b5e,0 0 30px #c79bff;animation:wave 2.4s ease-in-out infinite}
+.title span:nth-child(even){color:#ffe27a}
+.title small{flex-basis:100%;font-size:.38em;letter-spacing:.5em;color:#ffd0ea;text-shadow:0 0 14px #ff7bd5}
+.menu-btns{display:flex;flex-direction:column;gap:12px;align-items:center}.hint{opacity:.8;font-weight:700;font-size:.9rem;text-align:center;padding:0 12px}
+.levels{gap:18px;padding:16px}.grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;max-width:1000px}
+.card{width:170px;min-height:190px;border:0;border-radius:24px;padding:14px;color:#2a1b5e;display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;box-shadow:0 8px 0 var(--pl),0 14px 24px rgba(0,0,0,.3);transition:transform .2s;font-family:inherit}
+.card:hover:not(:disabled){transform:translateY(-6px) rotate(-1.5deg)}.card strong{font:800 1.15rem 'Baloo 2'}.card em{font-size:.78rem;font-style:normal;font-weight:700;opacity:.8}
+.card .num{font:800 2rem 'Baloo 2';width:56px;height:56px;border-radius:50%;background:#fff;display:grid;place-items:center}.card.locked{filter:grayscale(.8) brightness(.7);cursor:not-allowed}
+.stars i{font-style:normal;font-size:1.5rem;color:rgba(40,20,90,.25)}.stars i.on{color:#ffc400;text-shadow:0 0 8px #fff}.stars.big i{font-size:3rem}.stars.big i.on{animation:starpop .6s both}
+.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}.confetti i{position:absolute;top:-20px;width:10px;height:16px;border-radius:2px;animation:fall 3s linear infinite}

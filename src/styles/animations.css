@@ -1,0 +1,10 @@
+@keyframes fade{from{opacity:0}}
+@keyframes pop{from{transform:scale(.6);opacity:0}}
+@keyframes wipe{0%{clip-path:circle(0% at 50% 50%);opacity:1}45%{clip-path:circle(75% at 50% 50%);opacity:1}100%{clip-path:circle(75% at 50% 50%);opacity:0}}
+@keyframes bg{to{background-position:0 100%}}
+@keyframes drift{to{transform:translateX(calc(100vw + 400px))}}
+@keyframes twinkle{50%{opacity:.15;transform:scale(1.8)}}
+@keyframes wave{50%{transform:translateY(-10px) rotate(-3deg)}}
+@keyframes starpop{0%{transform:scale(0) rotate(-90deg)}70%{transform:scale(1.4)}100%{transform:scale(1)}}
+@keyframes fall{to{transform:translateY(120vh) rotate(720deg)}}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}

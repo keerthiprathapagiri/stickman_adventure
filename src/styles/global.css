@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;800&display=swap');
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent;user-select:none}
+html,body,#root{height:100%;overflow:hidden;background:#0d0b24;font-family:'Nunito',system-ui,sans-serif;color:#fff;touch-action:manipulation}
+.app{height:100%;display:grid;place-items:center}
+.btn{font:800 1.1rem 'Baloo 2',system-ui;color:#2a1b5e;background:linear-gradient(#fff,#e5dcff);border:0;border-radius:999px;padding:.55em 1.8em;min-width:210px;cursor:pointer;box-shadow:0 5px 0 #9a86e0,0 10px 20px rgba(0,0,0,.25);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 8px 0 #9a86e0,0 14px 24px rgba(0,0,0,.3)}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #9a86e0}
+.btn.big{font-size:1.6rem;background:linear-gradient(#ffe27a,#ffa94d);box-shadow:0 5px 0 #c9742a,0 10px 20px rgba(0,0,0,.25)}
+.btn.ghost{background:rgba(255,255,255,.18);color:#fff;box-shadow:none}
+.h2{font:800 2.2rem 'Baloo 2'}
